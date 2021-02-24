@@ -1,0 +1,26 @@
+.feature {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1.625rem;
+  justify-items: center;
+  max-width: 21.25rem;
+  align-content: start;
+
+  @media only screen and (min-width: 800px) {
+    justify-items: start;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    justify-items: start;
+    grid-gap: 2.5rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-gap: 1.21875rem;
+
+    @media only screen and (min-width: 950px) {
+      grid-gap: 1.3125rem;
+    }
+  }
+}

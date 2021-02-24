@@ -1,0 +1,120 @@
+.navigation {
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    margin-left: 1.625rem;
+  }
+
+  &__list {
+    @include grid-center;
+    grid-gap: 1.5rem;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: left;
+    background-color: $color-white;
+    border-radius: 0.3125rem;
+    width: 100%;
+    padding: 2rem;
+    max-width: 25rem;
+    scale: 1;
+    transition: all 0.5s;
+    visibility: visible;
+    opacity: 1;
+
+    @media only screen and (min-width: 600px) {
+      max-width: unset;
+      position: relative;
+      top: unset;
+      left: unset;
+      transform: unset;
+      padding: 0;
+      grid-auto-flow: column;
+      grid-gap: 1.875rem;
+    }
+  }
+  &__list--hidden {
+    scale: 0.8;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+
+    @media only screen and (min-width: 600px) {
+      scale: 1;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__list-item {
+    font-size: 1.125rem;
+    color: $color-dark-blue;
+    position: relative;
+    transition: all 0.6s;
+
+    @media only screen and (min-width: 600px) {
+      font-size: 0.875rem;
+      color: $color-grey;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        width: 100%;
+        opacity: 1;
+      }
+
+      @media only screen and (min-width: 600px) {
+        color: $color-dark-blue;
+      }
+    }
+
+    &::before {
+      transition: all 0.6s;
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 0.25rem;
+      bottom: -0.625rem;
+      left: 0;
+      background-image: linear-gradient(to right, $color-green, $color-cyan);
+      opacity: 0;
+
+      @media only screen and (min-width: 600px) {
+        bottom: -1.5rem;
+      }
+
+      @media only screen and (min-width: 800px) {
+        bottom: -1.9375rem;
+      }
+    }
+  }
+}
+
+.disable-scroll {
+  overflow-y: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient($color-dark-blue, transparent);
+  z-index: 10;
+  transition: all 0.3s;
+  visibility: visible;
+
+  @media only screen and (min-width: 600px) {
+    display: none;
+  }
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+}

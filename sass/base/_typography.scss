@@ -1,0 +1,97 @@
+.heading {
+  font-weight: 300;
+  color: $color-dark-blue;
+  transition: all 0.3s;
+
+  &--primary {
+    font-size: 2.40625rem;
+    line-height: 1.2;
+
+    @media only screen and (min-width: 950px) {
+      font-size: 2.890625rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 3.375rem;
+    }
+  }
+
+  &--secondary {
+    font-size: 1.9375rem;
+    line-height: 1.2;
+
+    @media only screen and (min-width: 950px) {
+      font-size: 2.40625rem;
+    }
+  }
+
+  &--feature {
+    font-size: 1.21875rem;
+
+    @media only screen and (min-width: 950px) {
+      font-size: 1.4375rem;
+      margin-bottom: 0.3125rem;
+    }
+  }
+
+  &--article {
+    font-size: 0.96875rem;
+    line-height: 1.25;
+    @include hover-green;
+  }
+}
+
+.paragraph {
+  font-size: 0.90625rem;
+  line-height: 1.75;
+
+  &--primary {
+    @media only screen and (min-width: 950px) {
+      font-size: 1rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      letter-spacing: -0.015625rem;
+    }
+  }
+
+  &--secondary {
+    max-width: 27.5rem;
+
+    @media only screen and (min-width: 950px) {
+      font-size: 1rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      letter-spacing: -0.0171875rem;
+      max-width: 39.0625rem;
+    }
+  }
+
+  &--feature {
+    @media only screen and (min-width: 950px) {
+      font-size: 0.96875rem;
+      line-height: 1.7;
+    }
+  }
+
+  &--author {
+    font-size: 0.609375rem;
+  }
+
+  &--article {
+    font-size: 0.78125rem;
+    line-height: 1.45;
+  }
+
+  &--copy {
+    @media only screen and (min-width: 800px) {
+      justify-self: end;
+      align-self: start;
+    }
+  }
+}

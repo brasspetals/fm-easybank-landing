@@ -1,0 +1,87 @@
+.footer {
+  background-color: $color-dark-blue;
+  padding: 2.625rem 0 2.75rem;
+  @include grid-center;
+
+  @media only screen and (min-width: 800px) {
+    padding: 2.96875rem 0 2.75rem;
+  }
+
+  &-container {
+    @include grid-center;
+    text-align: center;
+    grid-auto-flow: row;
+    grid-gap: 2rem;
+
+    @media only screen and (min-width: 800px) {
+      grid-template-areas:
+        "logo links button"
+        "social links copyright";
+      width: 100%;
+      max-width: 72.375rem;
+      padding: 0 1.5rem;
+      text-align: left;
+      grid-gap: 1.625rem 0;
+      justify-items: normal;
+      grid-template-columns: 1fr 1.3fr 1.9fr;
+    }
+  }
+
+  &__logo {
+    @media only screen and (min-width: 800px) {
+      grid-area: logo;
+      margin-bottom: 0;
+      justify-self: start;
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1.25rem;
+    align-items: center;
+
+    @media only screen and (min-width: 800px) {
+      grid-area: social;
+      align-content: start;
+      justify-content: start;
+      grid-gap: 0.8125rem;
+      margin-bottom: 0;
+      padding-top: 0.375rem;
+      justify-self: start;
+    }
+  }
+
+  &__links {
+    @include grid-center;
+    grid-gap: 1rem;
+
+    @media only screen and (min-width: 800px) {
+      grid-area: links;
+      grid-auto-flow: column;
+      justify-content: space-between;
+      min-width: 13.5rem;
+      max-width: 17.75rem;
+      grid-gap: 1.875rem;
+      margin: 0 1.25rem;
+    }
+  }
+
+  &__link-group {
+    display: grid;
+    grid-gap: 1rem;
+
+    @media only screen and (min-width: 800px) {
+      justify-self: start;
+      align-content: start;
+      margin-bottom: 0;
+      padding-top: 0.375rem;
+    }
+
+    &-item {
+      font-size: 0.90625rem;
+      color: $color-white;
+      @include hover-green;
+    }
+  }
+}

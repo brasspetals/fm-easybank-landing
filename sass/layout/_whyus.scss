@@ -1,0 +1,64 @@
+.why-us {
+  background-color: $color-grey-light;
+  padding: 4rem 0;
+  position: relative;
+  z-index: 1;
+  @include grid-center;
+
+  @media only screen and (min-width: 800px) {
+    margin-top: -21%;
+    display: grid;
+    justify-items: center;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    margin-top: -15.8125rem;
+    display: grid;
+    justify-items: center;
+    padding: 6.5625rem 0 6.3125rem;
+  }
+
+  &-container {
+    text-align: center;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 0.9375rem;
+    justify-items: center;
+    width: 100%;
+
+    @media only screen and (min-width: 800px) {
+      text-align: left;
+      justify-items: start;
+      max-width: 71.875rem;
+      padding: 0 2.5rem;
+      grid-gap: 1.5625rem;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      max-width: 69.375rem;
+      padding: 0;
+    }
+  }
+
+  &__features-wrapper {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 1.875rem;
+    width: 100%;
+    justify-items: center;
+
+    @media only screen and (min-width: 700px) {
+      @include grid-auto-fill;
+    }
+
+    @media only screen and (min-width: 800px) {
+      justify-items: start;
+    }
+
+    @media only screen and (min-width: 950px) {
+      margin-top: 2.875rem;
+    }
+  }
+}

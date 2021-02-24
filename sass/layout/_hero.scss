@@ -1,0 +1,92 @@
+.hero {
+  background-color: $color-grey-extra-light;
+  margin-top: 4rem;
+  padding-bottom: 5.5rem;
+  overflow: hidden;
+
+  @media only screen and (min-width: 600px) {
+    margin-top: 0;
+    @include grid-center;
+  }
+
+  &-container {
+    padding: 0 1rem;
+    @include grid-center;
+    grid-auto-flow: row;
+    grid-gap: 1.25rem;
+    position: relative;
+
+    @media only screen and (min-width: 800px) {
+      grid-auto-flow: column;
+      max-width: 73.875rem;
+      padding: 0 2.25rem;
+      grid-template-columns: 40% 1fr;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -11%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url("../images/bg-intro-mobile.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 0;
+
+      @media only screen and (min-width: 800px) {
+        background-image: url("../images/bg-intro-desktop.svg");
+        left: unset;
+        background-size: 107%;
+        right: -42%;
+        top: -31.25%;
+        height: 113%;
+        animation: 1.1s ease 0s 1 fadeInRight backwards;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 5;
+
+    @media only screen and (min-width: 800px) {
+      order: 2;
+    }
+
+    & img {
+      width: 100%;
+      margin-top: -35.5%;
+      animation: 0.7s ease-out 0s 1 fadeDown backwards;
+
+      @media only screen and (min-width: 800px) {
+        margin-top: -19%;
+        max-width: 47.9375rem;
+        transform: translateX(22.8%);
+        animation: 0.95s ease-out 0s 1 fadeUpDesktop backwards;
+        width: 119%;
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    display: grid;
+    grid-gap: 1rem;
+    max-width: 31.25rem;
+    position: relative;
+    z-index: 1;
+    animation: 0.7s ease-out 0s 1 fadeUp backwards;
+
+    @media only screen and (min-width: 800px) {
+      max-width: unset;
+      text-align: left;
+      align-items: start;
+      align-content: center;
+      grid-gap: 1.375rem;
+      animation: 1s ease-out 0s 1 fadeInLeft backwards;
+      height: 80%;
+    }
+  }
+}

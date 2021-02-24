@@ -1,0 +1,85 @@
+// Class added to pause animation until images are loaded
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
+// Mobile Navigation Menu
+@keyframes fadeInLeftNav {
+  0% {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  // 15% {
+  //   opacity: 0;
+  // }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Hero Container ::before
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Hero Content Mobile
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Hero Content Desktop
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Hero Img Mobile
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Hero Img Medium & Desktop
+@keyframes fadeUpDesktop {
+  0% {
+    opacity: 0.5;
+    transform: translateY(8%) translateX(22.8%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(22.8%);
+  }
+}

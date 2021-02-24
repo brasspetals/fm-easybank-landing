@@ -1,0 +1,40 @@
+.article {
+  border-radius: 0.3125rem;
+  overflow: hidden;
+  background-color: $color-white;
+  text-align: left;
+  box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.025);
+  max-width: 21.25rem;
+  transition: all 0.5s;
+
+  @media only screen and (min-width: 700px) {
+    max-width: unset;
+
+    &:hover {
+      box-shadow: 0 0.1875rem 0.9375rem rgba(0, 0, 0, 0.015);
+      transform: translateY(-0.1875rem);
+      transition: all 0.5s;
+    }
+  }
+
+  &__img {
+    border-radius: 0.3125rem 0.3125rem 0 0;
+    overflow: hidden;
+  }
+
+  &__img img {
+    width: 100%;
+    object-fit: cover;
+    height: 12.5rem;
+  }
+
+  &__info {
+    padding: 1.375rem 1.875rem 2.625rem;
+    display: grid;
+    grid-gap: 0.5rem;
+
+    @media only screen and (min-width: 1200px) {
+      padding: 1.375rem 1.5rem 1.5rem;
+    }
+  }
+}

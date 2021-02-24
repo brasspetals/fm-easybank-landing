@@ -1,0 +1,71 @@
+.btn {
+  display: grid;
+
+  &--menu {
+    @media only screen and (min-width: 600px) {
+      display: none;
+    }
+  }
+
+  &--gradient {
+    color: $color-white;
+    padding: 0.8125rem 2rem;
+    background-image: linear-gradient(to right, $color-green, $color-cyan);
+    align-self: center;
+    justify-self: center;
+    border-radius: 1.5rem;
+    font-size: 0.90625rem;
+    font-weight: 700;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      border-radius: 1.5rem;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(
+        to right,
+        lighten($color-green, 15%),
+        lighten($color-cyan, 15%)
+      );
+      z-index: -1;
+      transition: all 0.3s;
+      opacity: 0;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
+    }
+  }
+
+  &--header {
+    display: none;
+
+    @media only screen and (min-width: 800px) {
+      display: block;
+      margin-top: 0;
+    }
+  }
+
+  &--hero {
+    margin-top: 1rem;
+
+    @media only screen and (min-width: 800px) {
+      justify-self: start;
+      margin-top: 0.8125rem;
+    }
+  }
+
+  &--footer {
+    @media only screen and (min-width: 800px) {
+      grid-area: button;
+      justify-self: end;
+    }
+  }
+}
