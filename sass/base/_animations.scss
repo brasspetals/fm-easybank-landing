@@ -75,8 +75,11 @@
 // Hero Img Medium & Desktop
 @keyframes fadeUpDesktop {
   0% {
-    opacity: 0.5;
+    opacity: 0; // make sure img is hidden when animation is paused at beginning
     transform: translateY(8%) translateX(22.8%);
+  }
+  1% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
