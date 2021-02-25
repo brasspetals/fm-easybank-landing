@@ -6,6 +6,7 @@
   box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.025);
   max-width: 21.25rem;
   transition: all 0.5s;
+  backface-visibility: hidden;
 
   @media only screen and (min-width: 700px) {
     max-width: unset;
