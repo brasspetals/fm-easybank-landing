@@ -14,9 +14,9 @@ This is a solution to the [Easybank Landing Page challenge on Frontend Mentor](h
 
 ## Overview
 
-### The challenge
-
 ![Design preview for the Easybank landing page coding challenge](./images/desktop-preview.jpg)
+
+### The challenge
 
 Users should be able to:
 
